@@ -37,7 +37,7 @@ Contributor Covenant, as described at [the Contributor Covenant website](https:/
 
 ## Tests
 
-Please see this video for a thorough testing demonstration.
+Please see [this video](https://drive.google.com/file/d/1umQbFVJluWWUVCmWDMkQ87QI5CQZyd4D/view) for a thorough testing demonstration.
 
 ## Questions
 
