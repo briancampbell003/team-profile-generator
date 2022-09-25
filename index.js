@@ -148,7 +148,7 @@ function finishTeam() {
                     <div class="cardBody">
                         <p>Role: ${myTeam[i].getRole()}</p>
                         <p>Employee ID#: ${myTeam[i].id}</p>
-                        <p>Email: ${myTeam[i].email}</p>
+                        <p>Email: <a href="mailto:${myTeam[i].email}" target="blank">${myTeam[i].email}</a></p>
                         <p>Office: ${myTeam[i].office}</p>
                     </div>
                 </div>
@@ -164,8 +164,8 @@ function finishTeam() {
                     <div class="cardBody">
                         <p>Role: ${myTeam[i].getRole()}</p>
                         <p>Employee ID#: ${myTeam[i].id}</p>
-                        <p>Email: ${myTeam[i].email}</p>
-                        <p>GitHub: ${myTeam[i].github}</p>
+                        <p>Email: <a href="mailto:${myTeam[i].email}" target="blank">${myTeam[i].email}</a></p>
+                        <p>GitHub: <a href="https://github.com/${myTeam[i].github}" target="blank">${myTeam[i].github}</a></p>
                     </div>
                 </div>
             `
@@ -180,7 +180,7 @@ function finishTeam() {
                     <div class="cardBody">
                         <p>Role: ${myTeam[i].getRole()}</p>
                         <p>Employee ID#: ${myTeam[i].id}</p>
-                        <p>Email: ${myTeam[i].email}</p>
+                        <p>Email: <a href="mailto:${myTeam[i].email}" target="blank">${myTeam[i].email}</a></p>
                         <p>School: ${myTeam[i].school}</p>
                     </div>
                 </div>
