@@ -6,7 +6,7 @@
 
 ## Description
 
-This application allows a user to generate a well-formatted html page, styled by CSS, that displays all their team members with relevant information for each available role (manager, engineer and intern). It uses inquirer for command line user input and contains a suite of tests that employ Jest to test its class constructors for the various employee roles. It's main index.js file uses the principles of modular development to separate its functions and operations into discrete code blocks both for clarity and for debugging purposes.
+This application allows a user to generate a well-formatted html page, styled by CSS, that displays all their team members with relevant information for each available role (manager, engineer and intern). It uses enquirer for command line user input and contains a suite of tests that employ Jest to test its class constructors for the various employee roles. It's main index.js file uses the principles of modular development to separate its functions and operations into discrete code blocks both for clarity and for debugging purposes.
 
 ## Table of Contents
 
