@@ -6,7 +6,7 @@
 
 ## Description
 
-This application allows a user to generate a well-formatted html page, styled by CSS, that displays all their team members with relevant information for each role (manager, engineer and intern). It uses inquirer for command line user input and contains a suite of tests that employ Jest to test its class constructors for the various employee roles. It's main index.js file uses the principles of modular devlopment to seperate its functions and operations into discrete code blocks for clarity and for debugging purposes.
+This application allows a user to generate a well-formatted html page, styled by CSS, that displays all their team members with relevant information for each available role (manager, engineer and intern). It uses inquirer for command line user input and contains a suite of tests that employ Jest to test its class constructors for the various employee roles. It's main index.js file uses the principles of modular development to separate its functions and operations into discrete code blocks both for clarity and for debugging purposes.
 
 ## Table of Contents
 
@@ -21,11 +21,11 @@ This application allows a user to generate a well-formatted html page, styled by
 
 ## Installation
 
-Download the application as is and open its folder in Visual Studio Code.
+Download the application and open its folder in Visual Studio Code.
 
 ## Usage
 
-Open the folder using Integrated Terminal and enter the command node index.js, then respond to the prompts with the information for your team.
+Open the folder using Integrated Terminal and enter the command "node index.js", then respond to the prompts by providing the information for your team.
 
 ## License
 
