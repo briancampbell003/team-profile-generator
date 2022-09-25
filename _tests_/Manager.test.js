@@ -16,14 +16,6 @@ describe('Manager', () => {
             expect(obj.office).toEqual(office);
         });
 
-        // it("should throw an error if not provided a 'text' value", () => {
-        //   const cb = () => new Todo();
-        //   const err = new Error(
-        //     "Expected parameter 'text' to be a non empty string"
-        //   );
-
-        //   expect(cb).toThrowError(err);
-        // });
     });
 
     describe('Role method', () => {

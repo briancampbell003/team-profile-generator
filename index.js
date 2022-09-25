@@ -69,6 +69,7 @@ function mainMenu() {
         })
 }
 
+//  Add engineer and then finish team or return to main menu
 function addEngineer() {
     inquirer
         .prompt([
@@ -101,6 +102,7 @@ function addEngineer() {
     })
 }
 
+//  Add intern and then finish team or return to main menu
 function addIntern() {
     inquirer
         .prompt([
@@ -134,9 +136,9 @@ function addIntern() {
 }
 
 function finishTeam() {
-    console.log(myTeam);
     console.log("Thank you! You will find your generated html file in the 'dist' folder of this directory.")
 
+    // Store html code blocks for each team member's <div> in an array
     let teamMemberCards = [];
     for (let i = 0; i < myTeam.length; i++) {
         if (myTeam[i].getRole() === 'Manager') {
@@ -190,6 +192,7 @@ function finishTeam() {
 
     }
 
+    // Create a single large html code block by joining all team member strings, then pass this string into the htmlString and write file
     let teamMemberCardsString = teamMemberCards.join(" ");
     let htmlString = `
     <!DOCTYPE html>
