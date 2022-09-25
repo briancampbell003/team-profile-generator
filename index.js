@@ -140,16 +140,57 @@ function finishTeam() {
     let teamMemberCards = [];
     for (let i = 0; i < myTeam.length; i++) {
         if (myTeam[i].getRole() === 'Manager') {
-            console.log(`${myTeam[i].name} is a cool manager`)
+            let cardString = `
+                <div class="memberCard">
+                    <div class="cardHeader">${myTeam[i].name}
+                        <img class="roleIcon" src="./images/manager.png" alt="manager">
+                    </div>
+                    <div class="cardBody">
+                        <p>Role: ${myTeam[i].getRole()}</p>
+                        <p>Employee ID#: ${myTeam[i].id}</p>
+                        <p>Email: ${myTeam[i].email}</p>
+                        <p>Office: ${myTeam[i].office}</p>
+                    </div>
+                </div>
+            `
+            teamMemberCards.push(cardString);
+        }
+        if (myTeam[i].getRole() === 'Engineer') {
+            let cardString = `
+                <div class="memberCard">
+                    <div class="cardHeader">${myTeam[i].name}
+                        <img class="roleIcon" src="./images/engineer.png" alt="engineer">
+                    </div>
+                    <div class="cardBody">
+                        <p>Role: ${myTeam[i].getRole()}</p>
+                        <p>Employee ID#: ${myTeam[i].id}</p>
+                        <p>Email: ${myTeam[i].email}</p>
+                        <p>GitHub: ${myTeam[i].github}</p>
+                    </div>
+                </div>
+            `
+            teamMemberCards.push(cardString);
+        }
+        if (myTeam[i].getRole() === 'Intern') {
+            let cardString = `
+                <div class="memberCard">
+                    <div class="cardHeader">${myTeam[i].name}
+                        <img class="roleIcon" src="./images/intern.png" alt="manager">
+                    </div>
+                    <div class="cardBody">
+                        <p>Role: ${myTeam[i].getRole()}</p>
+                        <p>Employee ID#: ${myTeam[i].id}</p>
+                        <p>Email: ${myTeam[i].email}</p>
+                        <p>School: ${myTeam[i].school}</p>
+                    </div>
+                </div>
+            `
+            teamMemberCards.push(cardString);
         }
 
     }
 
     let teamMemberCardsString = teamMemberCards.join(" ");
-    renderPage(teamMemberCardsString);
-}
-
-function renderPage(teamMemberCardsString) {
     let htmlString = `
     <!DOCTYPE html>
     <html lang="en">
@@ -157,14 +198,23 @@ function renderPage(teamMemberCardsString) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-
-
+        <title>My Team</title>
+    
+        <link rel="stylesheet" href="style.css" />
+    
     </head>
     <body>
-        ${teamMemberCardsString}
-
+        <header id="myTeam-header">
+            My Team
+        </header>
+    
+        <div id="membersContain">
+            ${teamMemberCardsString}
+        </div>
+    
     </body>
     </html>
     `
+
+    fs.writeFileSync('./dist/index.html', htmlString);
 }
