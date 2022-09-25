@@ -12,22 +12,22 @@ inquirer
     .prompt([
         {
             type: 'input',
-            message: "What is your team manager's name",
+            message: "What is your team manager's name?",
             name: 'mgrName',
         },
         {
             type: 'input',
-            message: 'Manager id?',
+            message: "Manager's employee id?",
             name: 'mgrId',
         },
         {
             type: 'input',
-            message: 'Manager email?',
+            message: "Manager's email address?",
             name: 'mgrEmail',
         },
         {
             type: 'input',
-            message: 'Manager office number?',
+            message: "Manager's office number?",
             name: 'mgrOffice',
         }
     ])
@@ -74,22 +74,22 @@ function addEngineer() {
         .prompt([
             {
                 type: 'input',
-                message: "What is the engineer's name",
+                message: "What is the engineer's name?",
                 name: 'engName',
             },
             {
                 type: 'input',
-                message: "What is the engineer's employee id?",
+                message: "Engineer's employee id?",
                 name: 'engId',
             },
             {
                 type: 'input',
-                message: "What is the engineer's email address?",
+                message: "Engineer's email address?",
                 name: 'engEmail',
             },
             {
                 type: 'input',
-                message: "What is the engineer's GitHub username?",
+                message: "Engineer's GitHub username?",
                 name: 'engGit',
             }
         ])
@@ -111,17 +111,17 @@ function addIntern() {
             },
             {
                 type: 'input',
-                message: "What is the intern's employee id?",
+                message: "Intern's employee id?",
                 name: 'intId',
             },
             {
                 type: 'input',
-                message: "What is the intern's email address?",
+                message: "Intern's email address?",
                 name: 'intEmail',
             },
             {
                 type: 'input',
-                message: "What is the intern's school?",
+                message: "Intern's school?",
                 name: 'intSchool',
             }
         ])
@@ -134,29 +134,37 @@ function addIntern() {
 }
 
 function finishTeam() {
+    console.log(myTeam);
+    console.log("Thank you! You will find your generated html file in the 'dist' folder of this directory.")
 
+    let teamMemberCards = [];
     for (let i = 0; i < myTeam.length; i++) {
-
+        if (myTeam[i].getRole() === 'Manager') {
+            console.log(`${myTeam[i].name} is a cool manager`)
+        }
 
     }
+
+    let teamMemberCardsString = teamMemberCards.join(" ");
+    renderPage(teamMemberCardsString);
 }
 
+function renderPage(teamMemberCardsString) {
+    let htmlString = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-let htmlString = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
+    </head>
+    <body>
+        ${teamMemberCardsString}
 
-</head>
-<body>
-    <div> </div>
-    <div> </div>
-
-</body>
-</html>
-`
+    </body>
+    </html>
+    `
+}
